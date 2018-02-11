@@ -1,6 +1,7 @@
 require 'cucumber'
 require "test/version"
-require '../features/step_definitions/my_steps'
+$LOAD_PATH.push('../')
+
 
 module Test
   # Your code goes here...
