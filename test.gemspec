@@ -1,6 +1,8 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+step_defs = File.expand_path("../features/step_definitions", __FILE__)
+$LOAD_PATH.unshift(step_defs) unless $LOAD_PATH.include?(step_defs)
 require "test/version"
 
 Gem::Specification.new do |spec|
