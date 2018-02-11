@@ -22,10 +22,8 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.require_paths = ["features/step_definitions"]
   spec.files = Dir.glob("features/step_definitions/**/*.rb")
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "cucumber"
 end
