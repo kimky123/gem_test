@@ -1,11 +1,6 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "gem_test/version"
-
-step_defs = File.expand_path("../features/step_definitions", __FILE__)
-$LOAD_PATH.unshift(step_defs) unless $LOAD_PATH.include?(step_defs)
-require "my_steps"
 
 Gem::Specification.new do |spec|
   spec.name          = "gem_test"
@@ -32,4 +27,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "cucumber"
 end
