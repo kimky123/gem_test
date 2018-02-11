@@ -1,19 +1,20 @@
 
-lib = File.expand_path("../lib", __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+# lib = File.expand_path("../lib", __FILE__)
+# $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 step_defs = File.expand_path("../features/step_definitions", __FILE__)
 $LOAD_PATH.unshift(step_defs) unless $LOAD_PATH.include?(step_defs)
-require "test/version"
+require "gem_test/version"
+require "features/step_definitions/my_steps"
 
 Gem::Specification.new do |spec|
-  spec.name          = "test"
-  spec.version       = Test::VERSION
+  spec.name          = "gem_test"
+  spec.version       = GemTest::VERSION
   spec.authors       = ["kyung kim"]
   spec.email         = ["kyung86@gmail.com"]
 
-  spec.summary       = %q{test}
-  spec.description   = %q{test}
-  spec.homepage      = "https://github.com/kimky123/test.git"
+  spec.summary       = %q{gem_test}
+  spec.description   = %q{gem_test}
+  spec.homepage      = "https://github.com/kimky123/gem_test.git"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -25,7 +26,7 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.require_paths = ["lib", "features/step_definitions"]
+  spec.require_paths = ["features/step_definitions"]
   spec.files = Dir.glob("features/step_definitions/**/*.rb")
 
   spec.add_development_dependency "bundler", "~> 1.16"
