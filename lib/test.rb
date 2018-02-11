@@ -1,5 +1,6 @@
 require "test/version"
-require_all 'features'
+require 'require_all'
+require_all '../features'
 
 module Test
   # Your code goes here...
