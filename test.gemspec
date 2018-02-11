@@ -23,11 +23,9 @@ Gem::Specification.new do |spec|
       "public gem pushes."
   end
 
-  spec.require_paths = ["lib", "features"]
-  spec.files = Dir.glob("{features}/**/*")
+  spec.require_paths = ["lib", "features/step_definitions"]
+  spec.files = Dir.glob("features/step_definitions/**/*.rb")
 
   spec.add_development_dependency "bundler", "~> 1.16"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_runtime_dependency 'require_all'
-  spec.add_runtime_dependency 'cucumber'
 end
