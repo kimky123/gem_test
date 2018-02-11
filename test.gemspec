@@ -3,10 +3,6 @@ lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "test/version"
 
-features = File.expand_path("../features", __FILE__)
-$LOAD_PATH.unshift(features) unless $LOAD_PATH.include?(features)
-require "features"
-
 Gem::Specification.new do |spec|
   spec.name          = "test"
   spec.version       = Test::VERSION
