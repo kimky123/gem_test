@@ -1,7 +1,6 @@
 require 'cucumber'
 require "test/version"
-require 'require_all'
-require_all 'features'
+require '../features/step_definitions/my_steps'
 
 module Test
   # Your code goes here...
